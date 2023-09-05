@@ -87,7 +87,7 @@ export default {
       if (this.selectedFilter) {
         console.log('this.selectedFilter', this.selectedFilter)
         if (this.selectedFilter == 'id') {
-          users = users.filter((user) => user[this.selectedFilter] === this.searchText)
+          users = users.filter((user) => user[this.selectedFilter] == this.searchText)
         } else {
           users = users.filter((user) =>
             user[this.selectedFilter].toLowerCase().includes(this.searchText.toLowerCase())
