@@ -34,9 +34,10 @@
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="6">
+          <td colspan="12">
             <div class="right-btn">
               <button @click="prevPage" :disabled="currentPage === 1">Previous Page</button>
+              <span class="page-count">{{ currentPage }}</span>
               <button @click="nextPage" :disabled="currentPage * itemsPerPage >= totalUsers">
                 Next Page
               </button>
@@ -69,10 +70,10 @@ export default {
     },
     filteredUsers() {
       let users = this.getUsers
-      const query = this.searchText.toLowerCase()
+      
       if (this.searchText && !this.selectedFilter) {
+        const query = this.searchText.toLowerCase()
         users = users.filter((user) => {
-          // Check if any of the user's properties contain the search query
           return (
             user.id.toString().includes(query) ||
             user.username.toLowerCase().includes(query) ||
@@ -125,9 +126,13 @@ export default {
 
 <style scoped>
 input {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 button {
   margin-right: 10px;
+}
+.page-count{
+  padding: 0 15px 0 15px;
+  font-weight: 700
 }
 </style>
