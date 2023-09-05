@@ -1,0 +1,72 @@
+@import './base.css';
+body {
+  padding: 20px;
+}
+a {
+  color: #000;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 22px;
+}
+input,
+select {
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+}
+label {
+  display: block;
+  font-size: 13px;
+}
+button {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+.inner-section {
+  padding: 0 0 0 50px;
+}
+.section {
+  padding: 30px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.table {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+.table th,
+.table td {
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+}
+.table th {
+  font-weight: 600;
+}
+.right-btn {
+  text-align: right;
+}
+.block-section {
+  margin: 15px 0;
+}
+.block-inner {
+  border: 1px solid #d9d9d9;
+  display: inline-block;
+  padding: 15px;
+}
